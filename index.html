@@ -1,8 +1,145 @@
-
-<!DOCTYPE html>
 <html>
+<head>
+    <script src="https://d3js.org/d3.v2.js"></script>
+    <script src="https://rawgithub.com/stepheneb/netlogo-gcc/master/lib/simple-graph.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <button id="run-button">Start Reading</button>
+  <div>
+    The current readings are:
+      <div id="values">
+        <table>
+          <tr>
+            <th>
+              Pin
+            </th>
+            <th>
+              Value
+            </th>
+            <th>
+              Volts
+            </th>
+            <th>
+              Conversion
+            </th>
+            <th>
+              Converted
+            </th>
+            <th>
+              Graph this?
+            </th>
+          <tr>
+            <th>A0</th>
+            <td id="A0" class="value"></td>
+            <td id="A0-volts" class="volts"></td>
+            <td>
+              <select id="A0-conversion">
+                <option value="none"></option>
+                <option value="L35">L35 temperature</option>
+                <option value="TMP36">TMP36 temperature</option>
+                <option value="A1301">A1301 Hall Effect</option>
+              </select>
+            </td>
+            <td id="A0-convValue">
+            </td>
+            <td>
+              <input type="radio" name="graphSelection" value="A0" />
+            </td>
+          </tr>
+          <tr>
+            <th>A1</th>
+            <td id="A1"></td>
+            <td id="A1-volts" class="volts"></td>
+            <td>
+              <select id="A1-conversion">
+                <option value="none"></option>
+                <option value="L35">L35 temperature</option>
+                <option value="TMP36">TMP36 temperature</option>
+                <option value="A1301">A1301 Hall Effect</option>
+              </select>
+            </td>
+            <td id="A1-convValue">
+            </td>
+            <td>
+              <input type="radio" name="graphSelection" value="A1" />
+            </td>
+          </tr>
+          <tr>
+            <th>A2</th>
+            <td id="A2"></td>
+            <td id="A2-volts" class="volts"></td>
+            <td>
+              <select id="A2-conversion">
+                <option value="none"></option>
+                <option value="L35">L35 temperature</option>
+                <option value="TMP36">TMP36 temperature</option>
+                <option value="A1301">A1301 Hall Effect</option>
+              </select>
+            </td>
+            <td id="A2-convValue">
+            </td>
+            <td>
+              <input type="radio" name="graphSelection" value="A2" />
+            </td>
+          </tr>
+          <tr>
+            <th>A3</th>
+            <td id="A3"></td>
+            <td id="A3-volts" class="volts"></td>
+            <td>
+              <select id="A3-conversion">
+                <option value="none"></option>
+                <option value="L35">L35 temperature</option>
+                <option value="TMP36">TMP36 temperature</option>
+                <option value="A1301">A1301 Hall Effect</option>
+              </select>
+            </td>
+            <td id="A3-convValue">
+            </td>
+            <td>
+              <input type="radio" name="graphSelection" value="A3" />
+            </td>
+          </tr>
+          <tr>
+            <th>A4</th>
+            <td id="A4"></td>
+            <td id="A4-volts" class="volts"></td>
+            <td>
+              <select id="A4-conversion">
+                <option value="none"></option>
+                <option value="L35">L35 temperature</option>
+                <option value="TMP36">TMP36 temperature</option>
+                <option value="A1301">A1301 Hall Effect</option>
+              </select>
+            </td>
+            <td id="A4-convValue">
+            </td>
+            <td>
+              <input type="radio" name="graphSelection" value="A4" />
+            </td>
+          </tr>
+          <tr>
+            <th>A5</th>
+            <td id="A5"></td>
+            <td id="A5-volts" class="volts"></td>
+            <td>
+              <select id="A5-conversion">
+                <option value="none"></option>
+                <option value="L35">L35 temperature</option>
+                <option value="TMP36">TMP36 temperature</option>
+                <option value="A1301">A1301 Hall Effect</option>
+              </select>
+            </td>
+            <td id="A5-convValue">
+            </td>
+            <td>
+              <input type="radio" name="graphSelection" value="A5" />
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+  <div id="graph">
+  </div>
 </body>
 </html>
